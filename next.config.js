@@ -2,7 +2,7 @@
 const nextConfig = {
   distDir: "build",
   env: {
-    NEXT_GRAPHQL_URL: "http://localhost:5000/graphql",
+    NEXT_GRAPHQL_URL: process.env.NEXT_GRAPHQL_URL,
   },
 };
 
