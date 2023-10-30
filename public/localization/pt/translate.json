@@ -1,0 +1,59 @@
+{
+  "translations": {
+    "project": {
+      "title": "Politicando"
+    },
+    "menu": {
+      "administration": "Configuração",
+      "start": "Início"
+    },
+    "colors": {
+      "color1": "Cor principal",
+      "color2": "Segunda cor",
+      "color3": "Terceira cor",
+      "color4": "Quarta cor"
+    },
+    "generic": {
+      "projectBrand": "Politicando",
+      "password": "Senha",
+      "email": "E-mail",
+      "close": "Fechar",
+      "edit": "Editar",
+      "save": "Salvar",
+      "saving": "Salvando",
+      "no": "Não",
+      "cancel": "Cancelar",
+      "yes": "Sim",
+      "errorAction": "Tivemos um erro a executar essa operação.",
+      "login": "Entrar",
+      "forgotPassword": "Esqueceu sua senha?",
+      "changePassword": "Trocar senha",
+      "passwordAreNotTheSame": "As senhas não são iguais",
+      "passwordNotFilled": "Preencha a nova senha",
+      "passwordMustBeNew": "A nova senha não pode ser igual a antiga",
+      "errorLoginBadCombo": "Não foi possível fazer seu login. Sua senha ou e-mail estão errados.",
+      "errorLoginOther": "Não foi possível fazer seu login devido alguma falha do sistema. Por favor, contate o administrador.",
+      "genericError": "Desculpa, mas alguma coisa deu errado :("
+    },
+    "editor" : {
+      "generalTab": "Geral",
+      "imagesTab": "Imagens",
+      "colorsTab": "Cores",
+      "textsTab": "Textos",
+      "printTab": "Imprimir",
+      "printLong": "Imprimir meu santinho",
+      "printPdf": "Download PDF",
+      "printJpg": "Download JPG",
+      "texts": {
+        "candidateName": "Nome do candidato",
+        "candidateParty": "Partido",
+        "candidateRole": "Cargo",
+        "candidateNumber": "Número do candidato",
+        "candidateSlogan": "Slogan"
+      }
+    },
+    "errors": {
+      "networkError": "Erro ao conectar ao servidor"
+    }
+  }
+}
