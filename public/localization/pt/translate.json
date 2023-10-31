@@ -1,20 +1,16 @@
 {
   "translations": {
     "project": {
-      "title": "Politicando"
+      "title": "Inter Stats"
     },
     "menu": {
       "administration": "Configuração",
       "start": "Início"
     },
-    "colors": {
-      "color1": "Cor principal",
-      "color2": "Segunda cor",
-      "color3": "Terceira cor",
-      "color4": "Quarta cor"
-    },
     "generic": {
-      "projectBrand": "Politicando",
+      "team": "Time",
+      "points": "Pontos",
+      "planned": "Planejado",
       "password": "Senha",
       "email": "E-mail",
       "close": "Fechar",
@@ -35,22 +31,15 @@
       "errorLoginOther": "Não foi possível fazer seu login devido alguma falha do sistema. Por favor, contate o administrador.",
       "genericError": "Desculpa, mas alguma coisa deu errado :("
     },
-    "editor" : {
-      "generalTab": "Geral",
-      "imagesTab": "Imagens",
-      "colorsTab": "Cores",
-      "textsTab": "Textos",
-      "printTab": "Imprimir",
-      "printLong": "Imprimir meu santinho",
-      "printPdf": "Download PDF",
-      "printJpg": "Download JPG",
-      "texts": {
-        "candidateName": "Nome do candidato",
-        "candidateParty": "Partido",
-        "candidateRole": "Cargo",
-        "candidateNumber": "Número do candidato",
-        "candidateSlogan": "Slogan"
-      }
+    "plannedTable" : {
+      "name": "Tabela Planejada",
+      "tableUpdated": "Tabela Atualizada até a {{round}}a rodada",
+      "whatIsTitle": "O que é a tabela planejada?",
+      "whatIsDescription": "A tabela planejada mostra a expectativa de pontos que cada time tem que fazer até a atual rodada para ser campeão. Ela é um modo de analisar os times de uma maneira que a sequência de jogos não atrapalhe. Por exemplo, um time pode ter um início de campeonato complicado, aonde enfrenta diversos times grandes (normalmente mais fortes) logo nas primeiras rodadas, enquanto outro pode ter um início de campeonato mais fácil, enfrentando times menores (normalmente mais fracos).",
+      "howTeamsWereDividedTitle" : "Como os times foram divididos?",
+      "smallClubs": "Clubes pequenos",
+      "mediumClubs": "Clubes médios",
+      "bigClubes": "Clubes grandes"
     },
     "errors": {
       "networkError": "Erro ao conectar ao servidor"

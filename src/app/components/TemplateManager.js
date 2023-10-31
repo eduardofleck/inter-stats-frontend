@@ -5,6 +5,8 @@ import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/material/Menu";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Container from "@mui/material/Container";
+import Link from "next/link";
 
 export default function TemplateManager(props) {
   const theme = createTheme({
@@ -20,7 +22,9 @@ export default function TemplateManager(props) {
       <ThemeProvider theme={theme}>
         <AppBar position="fixed" color="primary" sx={{ top: "auto", top: 0 }}>
           <Toolbar>
-            <img src="/logo-32x32.png"></img>
+            <Link href="/" style={{ color: "inherit", textDecoration: "none" }}>
+              <img src="/logo-32x32.png"></img>
+            </Link>
             <Typography
               sx={{ margin: "0px 0px 0px 10px" }}
               variant="h6"
@@ -33,7 +37,10 @@ export default function TemplateManager(props) {
         </AppBar>
       </ThemeProvider>
       <main>
-        <div>{props.children}</div>
+        <div style={theme.mixins.toolbar} />
+        <Container maxWidth="lg">
+          <div style={{ margin: "15px 0px 0px 0px" }}>{props.children}</div>
+        </Container>
       </main>
     </div>
   );

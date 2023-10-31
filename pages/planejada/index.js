@@ -1,6 +1,8 @@
 // Import everything needed to use the `useQuery` hook
+import PlannedTable from "@/app/components/PlannedTable";
 import { useQuery, gql } from "@apollo/client";
 import React, { useRef, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const GET_ALL_GAMES = gql`
   query MyQuery {
@@ -60,6 +62,7 @@ export default function index() {
 
   const teamsQuery = useQuery(GET_ALL_TEAMS);
   const gamesQuery = useQuery(GET_ALL_GAMES);
+  const { t, i18n } = useTranslation();
 
   console.log("test");
 
@@ -134,33 +137,42 @@ export default function index() {
     if (games.length === 0 || teams.length === 0) {
       return <p>Carregando...</p>;
     } else {
-      return teams.map(function (team) {
+      let rows = [];
+      let round = 0;
+      teams.map(function (team) {
         let pointsPlanned = 0;
         let points = 0;
+
         games.forEach((game) => {
           if (
             game.scoreTeamHome !== null &&
             (team.id === game.teamHomeId || team.id === game.teamAwayId)
           ) {
+            round = Math.max(round, game.round);
             pointsPlanned += processPlanned(game, team.id);
             points += processGamePoints(game, team.id);
-            console.log(
-              `${game.round} - ${game.teamHomeName} ${game.scoreTeamHome} x ${game.scoreTeamAway} ${game.teamAwayName} - ${points}`
-            );
           }
         });
-        return (
-          <h3 key={team.id}>
-            {team.name} - {pointsPlanned} - {points}
-          </h3>
-        );
+
+        rows.push({
+          teamId: team.id,
+          team: team.name,
+          pointsPlanned,
+          points,
+          percentagePlanned: (points / pointsPlanned) * 100,
+        });
       });
+
+      return (
+        <div>
+          <PlannedTable rows={rows} lastRound={round} teams={teams} />
+        </div>
+      );
     }
   };
 
   return (
     <div>
-      <h1>TESTE</h1>
       <DisplayPlanejada />
     </div>
   );
