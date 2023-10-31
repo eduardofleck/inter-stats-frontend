@@ -39,7 +39,7 @@
       "howTeamsWereDividedTitle" : "Como os times foram divididos?",
       "smallClubs": "Clubes pequenos",
       "mediumClubs": "Clubes médios",
-      "bigClubes": "Clubes grandes"
+      "bigClubs": "Clubes grandes"
     },
     "errors": {
       "networkError": "Erro ao conectar ao servidor"
