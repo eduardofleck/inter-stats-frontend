@@ -5,6 +5,11 @@ export default function Home() {
   return (
     <div style={{ display: "grid", rowGap: "10px" }}>
       <CardMenuItem
+        message="Todos os campeonatos da base de dados"
+        button="Campeonatos"
+        link="/campeonatos"
+      />
+      <CardMenuItem
         message="Tabela planejada do Brasileirão 2023"
         button="Planejada"
         link="/planejada"

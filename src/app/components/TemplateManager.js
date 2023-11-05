@@ -7,8 +7,13 @@ import MenuIcon from "@mui/material/Menu";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Link from "next/link";
+import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 
 export default function TemplateManager(props) {
+  const { t, i18n } = useTranslation();
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -31,8 +36,26 @@ export default function TemplateManager(props) {
               color="inherit"
               component="div"
             >
-              Inter Stats
+              {t("project.title")}
             </Typography>
+            <Link
+              href="/sobre"
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                position: "absolute",
+                right: "30px",
+              }}
+            >
+              <Typography
+                sx={{ margin: "0px 0px 0px 10px" }}
+                variant="subtitle1"
+                color="inherit"
+                component="div"
+              >
+                {t("generic.about")}
+              </Typography>
+            </Link>
           </Toolbar>
         </AppBar>
       </ThemeProvider>

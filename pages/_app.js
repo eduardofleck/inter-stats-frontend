@@ -2,7 +2,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "../src/app/components/i18n";
 import { withTranslation, Trans } from "react-i18next";
 import TemplateManager from "../src/app/components/TemplateManager";
-import { red, white } from "@mui/material/colors";
+import { red } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import {
@@ -20,7 +20,6 @@ const client = new ApolloClient({
 const theme = createTheme({
   palette: {
     primary: red,
-    secondary: white,
   },
 });
 

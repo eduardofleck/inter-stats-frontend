@@ -8,6 +8,7 @@
       "start": "Início"
     },
     "generic": {
+      "about": "Sobre",
       "team": "Time",
       "points": "Pontos",
       "planned": "Planejado",
@@ -31,6 +32,11 @@
       "errorLoginOther": "Não foi possível fazer seu login devido alguma falha do sistema. Por favor, contate o administrador.",
       "genericError": "Desculpa, mas alguma coisa deu errado :("
     },
+    "championships" : {
+      "name": "Campeonatos",
+      "totalGamesCountTitle": "Total de jogos na base de dados: {{totalGamesCount}}",
+      "games": "Jogos"
+    },
     "plannedTable" : {
       "name": "Tabela Planejada",
       "tableUpdated": "Tabela Atualizada até a {{round}}a rodada",
@@ -40,6 +46,13 @@
       "smallClubs": "Clubes pequenos",
       "mediumClubs": "Clubes médios",
       "bigClubs": "Clubes grandes"
+    },
+    "about": {
+      "title": "Sobre Inter Stats",
+      "contributors": "Colaboradores",
+      "github": "Github",
+      "data": "Dados",
+      "frameworks": "Frameworks"
     },
     "errors": {
       "networkError": "Erro ao conectar ao servidor"

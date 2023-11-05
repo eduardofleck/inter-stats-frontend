@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const GET_ALL_GAMES = gql`
   query MyQuery {
-    games(condition: { idchampionship: 1 }) {
+    games(condition: { idchampionship: 2023 }) {
       nodes {
         teamByIdteamhome {
           id
@@ -29,55 +29,33 @@ const GET_ALL_GAMES = gql`
   }
 `;
 
-const GET_ALL_TEAMS = gql`
-  {
-    teams {
-      nodes {
-        id
-        name
-        size
-      }
-    }
-  }
-`;
-
-function DisplayTeamSizes() {
-  const { loading, error, data } = useQuery(GET_ALL_TEAMS);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
-
-  return data.teams.nodes.map(({ id, name, size }) => (
-    <div key={id}>
-      <h3>
-        {name} {size}
-      </h3>
-    </div>
-  ));
-}
-
 export default function index() {
   const [teams, setTeams] = useState([]);
   const [games, setGames] = useState([]);
 
-  const teamsQuery = useQuery(GET_ALL_TEAMS);
+  //const teamsQuery = useQuery(GET_ALL_TEAMS);
   const gamesQuery = useQuery(GET_ALL_GAMES);
   const { t, i18n } = useTranslation();
 
-  console.log("test");
-
   useEffect(() => {
-    if (!teamsQuery.loading && teamsQuery.data) {
-      const newTeams = [];
-      teamsQuery.data.teams.nodes.map(({ id, name, size }) =>
-        newTeams.push({ id, name, size })
+    if (!gamesQuery.loading && gamesQuery.data) {
+      let teamsId = [];
+      let newTeams = [];
+      gamesQuery.data.games.nodes.map(
+        ({ teamByIdteamhome, teamByIdteamaway }) => {
+          if (!teamsId.includes(teamByIdteamhome.id)) {
+            teamsId.push(teamByIdteamhome.id);
+            newTeams.push(teamByIdteamhome);
+          }
+          if (!teamsId.includes(teamByIdteamaway.id)) {
+            teamsId.push(teamByIdteamaway.id);
+            newTeams.push(teamByIdteamaway);
+          }
+        }
       );
 
       setTeams(newTeams);
-    }
 
-    if (!gamesQuery.loading && gamesQuery.data) {
-      console.log(gamesQuery.data);
       const newGames = [];
       gamesQuery.data.games.nodes.map(
         ({
@@ -104,7 +82,7 @@ export default function index() {
 
       setGames(newGames);
     }
-  }, [teamsQuery.loading, gamesQuery.loading]);
+  }, [gamesQuery.loading]);
 
   const DisplayPlanejada = () => {
     function processPlanned(game, teamId) {
