@@ -3,10 +3,6 @@
     "project": {
       "title": "Inter Stats"
     },
-    "menu": {
-      "administration": "Configuração",
-      "start": "Início"
-    },
     "generic": {
       "about": "Sobre",
       "team": "Time",
@@ -20,24 +16,16 @@
       "saving": "Salvando",
       "no": "Não",
       "cancel": "Cancelar",
-      "yes": "Sim",
-      "errorAction": "Tivemos um erro a executar essa operação.",
-      "login": "Entrar",
-      "forgotPassword": "Esqueceu sua senha?",
-      "changePassword": "Trocar senha",
-      "passwordAreNotTheSame": "As senhas não são iguais",
-      "passwordNotFilled": "Preencha a nova senha",
-      "passwordMustBeNew": "A nova senha não pode ser igual a antiga",
-      "errorLoginBadCombo": "Não foi possível fazer seu login. Sua senha ou e-mail estão errados.",
-      "errorLoginOther": "Não foi possível fazer seu login devido alguma falha do sistema. Por favor, contate o administrador.",
-      "genericError": "Desculpa, mas alguma coisa deu errado :("
+      "yes": "Sim"
     },
     "championships" : {
+      "menu": "Todos os campeonatos da base de dados",
       "name": "Campeonatos",
       "totalGamesCountTitle": "Total de jogos na base de dados: {{totalGamesCount}}",
       "games": "Jogos"
     },
     "plannedTable" : {
+      "menu": "Tabela planejada Brasileirão 2023",
       "name": "Tabela Planejada",
       "tableUpdated": "Tabela Atualizada até a {{round}}a rodada",
       "whatIsTitle": "O que é a tabela planejada?",
@@ -53,9 +41,6 @@
       "github": "Github",
       "data": "Dados",
       "frameworks": "Frameworks"
-    },
-    "errors": {
-      "networkError": "Erro ao conectar ao servidor"
     }
   }
 }

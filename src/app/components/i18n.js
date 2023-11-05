@@ -2,8 +2,8 @@ import i18n from "i18next";
 //import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 //import XHR from "i18next-xhr-backend";
-//import languageEN from "../localization/en/translate.json";
 import languagePT from "../../../public/localization/pt/translate.json";
+import languageEN from "../../../public/localization/en/translate.json";
 
 i18n
   //.use(XHR)
@@ -12,6 +12,7 @@ i18n
   .init({
     resources: {
       pt: languagePT,
+      en: languageEN,
     },
     /* default language when load the website in browser */
     lng: "pt",

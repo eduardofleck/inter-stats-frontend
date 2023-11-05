@@ -1,0 +1,39 @@
+{
+  "translations": {
+    "project": {
+      "title": "Inter Stats"
+    },
+    "generic": {
+      "about": "About",
+      "team": "Team",
+      "points": "Points",
+      "planned": "Planned",
+      "no": "No",
+      "cancel": "Cancel",
+      "yes": "Yes"
+    },
+    "championships" : {
+      "menu": "All championships in the database",
+      "name": "Championships",
+      "totalGamesCountTitle": "Number of games in the database: {{totalGamesCount}}",
+      "games": "Games"
+    },
+    "plannedTable" : {
+      "name": "Planned Table",
+      "tableUpdated": "Table updated untill {{round}} round",
+      "whatIsTitle": "What is the planned table?",
+      "whatIsDescription": "A tabela planejada mostra a expectativa de pontos que cada time tem que fazer até a atual rodada para ser campeão. Ela é um modo de analisar os times de uma maneira que a sequência de jogos não atrapalhe. Por exemplo, um time pode ter um início de campeonato complicado, aonde enfrenta diversos times grandes (normalmente mais fortes) logo nas primeiras rodadas, enquanto outro pode ter um início de campeonato mais fácil, enfrentando times menores (normalmente mais fracos).",
+      "howTeamsWereDividedTitle" : "How we split the teams?",
+      "smallClubs": "Small clubs",
+      "mediumClubs": "Medium clubs",
+      "bigClubs": "Big clubs"
+    },
+    "about": {
+      "title": "About Inter Stats",
+      "contributors": "Contributors",
+      "github": "Github",
+      "data": "Data",
+      "frameworks": "Frameworks"
+    }
+  }
+}
