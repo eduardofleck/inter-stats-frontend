@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 const GET_ALL_GAMES = (id) => gql`
   query MyQuery {
-    games(condition: { idchampionship: ${id} }, orderBy: IDROUND_ASC) {
+    games(condition: { idchampionship: "${id}" }, orderBy: IDROUND_ASC) {
       nodes {
         id
         teamByIdteamhome {
